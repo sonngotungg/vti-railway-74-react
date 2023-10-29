@@ -1,0 +1,27 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.list {
+    list-style: none;
+}
+
+.list-item-even {
+    color: red;
+    font-weight: bold;
+}
+
+.list-item-odd {
+    color: yellow;
+    font-weight: bold;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
