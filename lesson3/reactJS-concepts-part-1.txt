@@ -1,0 +1,32 @@
+1. ReactJS & Think in React
+- React is a JavaScript library for rendering user interfaces (UI)
+- think in react
+Step 1: Break the UI into a component hierarchy
+Step 2: Build a static version in React 
+Step 3: Add state
+Step 4: Optimize performance
+
+2. React Component
+- class component & functional component
+- React Element & Virtual DOM
+
+3. JSX & Styling
+- <p>{state}</p>
+- conditional rendering
+- rendering lists
+- conditional styling
+
+4. State & props
+- Phan biet State va Props
+- When React Component Render
+
+5. React LifeCycle
+- Mounting, Updating, Unmounting
+- lifecycle methods for class components
+
+7. React Components Communication
+- Parent to Children
+- Children to Parent
+- Children to Children
+
+8. Reat Hooks: useState, useEffect
