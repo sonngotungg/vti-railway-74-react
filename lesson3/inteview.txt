@@ -1,0 +1,51 @@
+============== TS ==============
+================================
+1. Typescript là gì?
+2. Static type là gì?
+3. So sánh TS và JS
+4. Các tính năng chính của TS
+
+
+============== TS ==============
+================================
+1. ES6 là gì
+2. Các tính năng chính của ES6
+
+============== JS nâng cao ==============
+================================
+1. trình bày về scope của js
+2. lexical scope là gì
+3. closure là gì
+4. Phân biệt Higher-Order function và callback
+5. hoisting là gì
+6. phân biệt var, let, const
+7. phân biệt callback, promise, async/await
+8. cách js xử lí bất đồng bộ
+9. js là đơn luồng hay đa luồng
+10. Trình bày về data type trong JS
+hint: (primititive & complex) --> khai bao / declaration, (value & reference) --> gan gia tri / assignment
+11. phân biệt các hàm arr sau:
+	.filter()  *
+	.find() 
+	.map() *
+	.forEach() *
+	.some()
+	.every()
+	.reduce()
+	.includes()
+
+phan biet: filter() - map() - forEach()
+           some() - every()
+
+
+12. nodeJS là gì
+13. shallow copy & deep copy
+14. Callback function là gì?
+15. Dùng callback nhiều có gặp vấn đề gì ko
+16. Callback hell là gì? Nêu cách khắc phục
+17. Promise là gì?
+18. Nêu các thành phần trong Promise
+19. Các trạng thái trong Promise là gì
+20. then() và catch() để làm gì trong Promise?
+21. Async await là gì?
+22. Nêu sự khác nhau giữa promise và async await
