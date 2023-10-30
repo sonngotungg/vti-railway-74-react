@@ -1,16 +1,19 @@
 import { useState } from "react";
 
 function ChildComponent({ 
-    parentData,
-    sendDataFromChildToParent,
-    onMessageChange
- }) {
-    const [count, setCount] = useState(0)
+  parentData,
+  sendDataFromChildToParent,
+  onMessageChange
+}) {
+
+    const [count, setCount] = useState(0)     // state
 
     const handleInputChange = (e) => {
       const newMessage = e.target.value;
       onMessageChange(newMessage); // Communicate with the parent
     };
+
+    console.log({parentData})
   
     return (
       <div>
