@@ -27,6 +27,6 @@ Step 4: Optimize performance
 7. React Components Communication
 - Parent to Children
 - Children to Parent
-- Children to Children
+- Children to Siblings  
 
 8. Reat Hooks: useState, useEffect
