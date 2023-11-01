@@ -1,0 +1,5 @@
+1. phân biệt var, let, const
+2. phân biệt callback, promise, async/await
+3. Phân biệt state và props
+4. Các tính năng chính của ES6
+5. trình bày về scope của js
