@@ -1,0 +1,13 @@
+.list {
+    list-style: none;
+  }
+  
+  .list-item-even {
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .list-item-odd {
+    color: green;
+    font-weight: normal;
+  }
