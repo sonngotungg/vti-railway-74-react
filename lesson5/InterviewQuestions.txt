@@ -1,5 +1,33 @@
 1. phân biệt var, let, const
++ Var để khởi tạo biến có scope Global
++ let dùng để khởi tạo biến  scope function
++ const dùng để khai báo biến scope block
+
+
 2. phân biệt callback, promise, async/await
++ giống nhau : cả 3 cùng dùng để xử lý bất đồng bộ
++ khác nhau : 
+    + callback: Khi 1 function được dùng làm parameter của function khác,nhưng thường thì không dùng callback vì sẻ rơi vào callback hell
+    + promise : promise là 1 cơ chế của JavaScript  dùng promise chain để xử lý bất đồng bộ
+    + async/await : thực chất là promise dùng để xử lý bất đồng bộ 1 cách đồng bộ hơn
+
 3. Phân biệt state và props
++ state : dùng để lưu các giá trị động của giao diện
++ props : dùng để truyền dữ liệu từ cha sang con
+
+
 4. Các tính năng chính của ES6
+gồm có 
++ Arrow function
++ Destructuring Assignments
++ Default Parameters
++ Rest and Spread Operators
++ Template String
++ Import và ex
+
+
 5. trình bày về scope của js
+scope của js gồm có Global scope, function scope, block scope
++ Global scope: có thể gọi ở bất cứ đâu
++ function scope : chỉ có thể gọi ở trong function được khai báo, thực chất cũng là 1 block scope
++ block scope : chỉ có thể gọi ở trong block được khai báo
