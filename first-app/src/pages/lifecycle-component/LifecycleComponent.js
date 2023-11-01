@@ -83,6 +83,9 @@ export const LifecycleFunctionalComponent = () => {
 
   useEffect(() => {
     console.log('after render - only 1 time after mounting')
+    // goi api
+    // add event handler
+    //setInterval(callback, 1000)
   }, [])
 
   useEffect(() => {

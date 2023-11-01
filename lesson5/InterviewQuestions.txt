@@ -1,5 +1,13 @@
 1. phân biệt var, let, const
+-var là global schope, let va const là block shope
+-var có thể update và khai báo lại, let thì không, const thì không thể aupdat dung như khai báo lại.
+-const cần khởi tạo
 2. phân biệt callback, promise, async/await
+- callback tham số được truyền vào bằng parameter, bất đồng bộ
+- promise là cơ chế thực thi các tác vụ bất đồng bộ, tranh callback Hello
+- async/await thực hiện các bất đồng bộ một cách đồng bô. giống với promise nhưng nó tuần tự hơn trong 1
 3. Phân biệt state và props
+- state dùng để chứa dữ liệu hoặc thông tin Component. khi state thay đổi thì Component sẽ render lại.
+-props là một ọbjec trong React lưu lại gá trị cửa các thuốc tính. chung cho phếp  các Component giao tiếp với nhau thông qua ccs tham số
 4. Các tính năng chính của ES6
 5. trình bày về scope của js

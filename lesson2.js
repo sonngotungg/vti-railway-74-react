@@ -15,13 +15,14 @@ function display() {
 // ssh-keygen -t rsa -b 4096
 // C:\Users\DucNguyenAnh/.ssh/vti_railway_74_rsa
 // eval $(ssh-agent -s)
-// ssh-add ~/.ssh/id_vti_railway_74_rsa
-
+// ssh-add ~/.ssh/vti_railway_74_rsa
+// code ~/.ssh/config
+// clip < ~/.ssh/vti_railway_74_rsa.pub
+// ssh -T git@github.com
 
 // code ~/.ssh/config
 // Host github.com
-//   AddKeysToAgent yes
-//   IdentityFile ~/.ssh/vti_railway_74_rsa
-// clip < ~/.ssh/vti_railway_74_rsa.pub
+// AddKeysToAgent yes
+// IdentityFile ~/.ssh/vti_railway_74_rsa
 
-// ssh -T git@github.com
+//git checkout -b AnhDucNguyen93
