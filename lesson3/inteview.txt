@@ -57,3 +57,4 @@ phan biet: filter() - map() - forEach()
 24. Phân biệt React Component và React Element
 25. ReactJS là gì
 26. Phân biệt state và props
+27. Phân biệt useState và useRef và useReducer
