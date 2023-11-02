@@ -1,0 +1,8 @@
+Context API
+Redux
+Redux-Toolkit (must)
+Redux-Thunk    (must)
+Practice React Concepts (optional)
+Practice All Hooks (useState, useEffect, useRef, useReducer, useMemo, useCallback) + React.memo()
+
+Assessments --> need to do the deployment
