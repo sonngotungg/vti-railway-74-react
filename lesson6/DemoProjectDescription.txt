@@ -1,0 +1,16 @@
+1. CRUD features
+--> Form + display list
+
+2. Apply Hooks
+--> useState, useEffect, useRef, useMemo, useCallback
+
+3. Use Redux
+--> redux-toolkit + redux-thunk (for API intergration)
+
+4. apply filters for display list
+
+optional:
+- authentication + authorizaiton
+
+** Preparation:
+BE + API + Swagger
