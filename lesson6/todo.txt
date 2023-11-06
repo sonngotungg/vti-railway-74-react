@@ -3,6 +3,6 @@ Redux
 Redux-Toolkit (must)
 Redux-Thunk    (must)
 Practice React Concepts (optional)
-Practice All Hooks (useState, useEffect, useRef, useReducer, useMemo, useCallback) + React.memo()
+Practice All Hooks (useState, useEffect, useRef, useReducer, useMemo, useCallback, useContext) + React.memo() + Context API
 
 Assessments --> need to do the deployment
