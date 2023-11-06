@@ -1,0 +1,15 @@
+1. So sánh redux, react-redux, redux-toolkit
+2. redux là gì
+3. redux workflow
+4. redux middleware là gì
+5. so sánh context API và redux --> redux devtool
+6. khi store thay đổi thì các component có render lại k
+7. redux reducer có thể xử lí bất đồng bộ k / gọi API trong reducer --> k
+
+redux là 1 thư viện js để quản lí state
+react, angular, js thuần /jquery
+
+react-redux
+redux-toolkit --> hỗ trợ sử dụng react-redux thuận tiện --> hỗ trợ việc setup reducer
+
+state management --> global state --> component communication (bất component)
