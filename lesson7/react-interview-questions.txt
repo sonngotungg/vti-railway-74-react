@@ -1,16 +1,52 @@
 1. React là gì
+là thư viện của JS để xậy dựng giao diện UI
+
 2. Phân biệt state và props
++ state : dùng để lưu các giá trị động của giao diện, có thể thay đổi
++ props : dùng để truyền dữ liệu từ cha sang con, chỉ đọc không thay đổi được
+
 3. JSX là gì, các tính năng chính
+JSX để viết code trong React giống như trong HTML
+
 4. trình bày về component lifecycle
+gồm có 3 trạng thái mounting,updateting, un mounting 
+
 5. khi nào component render
+khi State thảy đổi thì component render
+
 6. trình bày các hook đã dùng
++ useState: lưu các giá trị động
++ useEffect: xử lý các công việc phụ
++ useReducer:
++ useMemo: Hạn chế 1 logic chạy đi chạy lại nhiều lần
++ useCallback + React.memo : hạn chế việc 1 Fn khai báo nhiều lần
++ useRef: lưu giá trị giống như useState và còn dùng để trỏ để html element
+
 7. So sánh redux, react-redux, redux-toolkit
+redux là thư viện JS để quản lý State
+react-redux hỗ trợ React quản lý State tốt hơn
+redux-toolkit hỗ trợ setup reducer
 8. redux là gì
+redux là thư viện JS để quản lý State
 9. redux workflow
+giao diện gọi đến Evenhandler gọi đến Dispatch tạo ra action gọi đến store đến reducer update State
+
 10. redux middleware là gì
+để xử lý bất đồng bộ  trong redux reducer
+
 11. so sánh context API và redux --> redux devtool
++ context API được build sẵn lưu dữ phần dùng chung của các component trong  context provider
++ redux là thư viện và lưu phần chung của com trong Store
 12. khi store thay đổi thì các component có render lại k
+tùy vào component có dùng store đó không
+
 13. redux reducer có thể xử lí bất đồng bộ k
+không
+
 14. Virtual Dom là gì
 15. trình bày cách các component giao tiếp với nhau
+Cách 1: component giao tiếp với nhau thông qua callback và props
+Cách 2: dùng API context
+Cách 3: dùng thư viện như redux, redux toolkit
+
 16. React.Fragment là gì
