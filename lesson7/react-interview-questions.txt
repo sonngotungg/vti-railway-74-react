@@ -1,16 +1,68 @@
 1. React là gì
+- là thư viện javascript dùng cho build UI
 2. Phân biệt state và props
+- state để lưu thông tin động của trang web
+- props là state của parent component, đc parent component dùng để truyền data cho child components
+- state có thể update đc còn props thì readonly *
+
 3. JSX là gì, các tính năng chính
+- JSX là cú pháp hỗ trợ viết HTML dễ dàng hơn trong React project
+- conditional rendering, conditional styling, list rendering ...  
+
 4. trình bày về component lifecycle
+mounting: chạy 1 lần duy nhất
+updating: state change thì updating
+unmounting: chạy 1 lân duy nhất
+--> mouting là gì ?
+
 5. khi nào component render
+component render khi state thay đổi
+--> vậy props thay đổi thì component có render k
+
 6. trình bày các hook đã dùng
+cần chia nhóm các hooks và so sánh:
+useState - useReducer - useRef
+useEffect
+useMemo, useCallback, React.memo() --> React.memo k phải là hook nhưng nó support cùng useCallback
+useContext --> Context API --> state management --> component communication --> redux
+
 7. So sánh redux, react-redux, redux-toolkit
+- redux là thư viện JS dùng cho quản lí state, có thể dùng kết hợp với React, angular, nextjs...
+-
 8. redux là gì
 9. redux workflow
+- mô tả gif
+
 10. redux middleware là gì
+- nằm giữa dispatch và reducer
+- chuyên xử lí bất đồng bộ, vd call api
+- mô tả redux workflow có middleware trong đấy
+
 11. so sánh context API và redux --> redux devtool
+- context API là công cụ có sẵn của React để giúp quản lí state dùng chung (global state)
+- redux là thư viện cx dùng để giúp quản lí state dùng chung
+redux kết hợp với react-redux và redux-toolkit giúp xây dựng state dùng chung cho các project lớn
+
 12. khi store thay đổi thì các component có render lại k
+- chỉ khi component dùng useSelector (redux) hoặc useContext (context api) thì mới render lại
+- component k dùng thì k bị render lại
+- đó là ưu điểm của dùng context api / redux so với dùng props/callback
+
 13. redux reducer có thể xử lí bất đồng bộ k
+- k, xử lí bất đồng bộ phải là của middleware
+
 14. Virtual Dom là gì
+- nó là 1 cấu trúc cây gồm các js object
+- cơ chế render của react
+- so sánh Virtual DOM và DOM
+
 15. trình bày cách các component giao tiếp với nhau
+- dùng props & callback
+props để parent component truyền dữ liệu cho child component
+callback để component con truyền data cho thằng cha và update state của thằng cha
+
+- global state --> context api / redux
+
 16. React.Fragment là gì
+<></>
+<React.Fragment></React.Fragment>
