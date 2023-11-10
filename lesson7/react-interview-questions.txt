@@ -44,9 +44,15 @@ tùy vào component có dùng store đó không
 không
 
 14. Virtual Dom là gì
+- nó là 1 cấu trúc cây gồm các js object
+- cơ chế render của react
+- so sánh Virtual DOM và DOM
+
 15. trình bày cách các component giao tiếp với nhau
 Cách 1: component giao tiếp với nhau thông qua callback và props
 Cách 2: dùng API context
 Cách 3: dùng thư viện như redux, redux toolkit
 
 16. React.Fragment là gì
+<></>
+<React.Fragment></React.Fragment>
