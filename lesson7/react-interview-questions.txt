@@ -1,0 +1,16 @@
+1. React là gì
+2. Phân biệt state và props
+3. JSX là gì, các tính năng chính
+4. trình bày về component lifecycle
+5. khi nào component render
+6. trình bày các hook đã dùng
+7. So sánh redux, react-redux, redux-toolkit
+8. redux là gì
+9. redux workflow
+10. redux middleware là gì
+11. so sánh context API và redux --> redux devtool
+12. khi store thay đổi thì các component có render lại k
+13. redux reducer có thể xử lí bất đồng bộ k
+14. Virtual Dom là gì
+15. trình bày cách các component giao tiếp với nhau
+16. React.Fragment là gì
