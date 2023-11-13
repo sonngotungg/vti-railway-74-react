@@ -1,15 +1,43 @@
-1. So sánh redux, react-redux, redux-toolkit
-2. redux là gì
-3. redux workflow
-4. redux middleware là gì
-5. so sánh context API và redux --> redux devtool
-6. khi store thay đổi thì các component có render lại k
-7. redux reducer có thể xử lí bất đồng bộ k / gọi API trong reducer --> k
+*) React examples:
 
-redux là 1 thư viện js để quản lí state
-react, angular, js thuần /jquery
+1. hooks (useState, useEffect, useRef, useReducer, useMemo, useCallback, React.memo())
+2. lifecycle 
+3. component communication (parent - child, child - parent, child - child)
+4. JSX
+5. children
+6. react-router-dom
+7. redux-toolkit
+8. redux-thunk
+9. axios
+10. custom hook
 
-react-redux
-redux-toolkit --> hỗ trợ sử dụng react-redux thuận tiện --> hỗ trợ việc setup reducer
 
-state management --> global state --> component communication (bất component)
+*) React interview questions:
+
+1. React là gì
+2. Nêu các thành phần quan trọng trong React
+3. JSX là gì
+4. So sánh functional component và class component
+5. Phân biệt state và props
+6. Trình bày về các hooks
+7. trình bày về component lifecycle
+8. virtualDOM là gì
+9. phân biệt stateless component và stateful component
+10. phân biệt uncontrolled component và controlled component
+11. React là one-way binding hay two-way binding
+12. HOC là gì
+13. React.Fragment là gì
+14. single source of truth trong form là sao
+15. cơ chế re-render của React
+16. Render Props là gì
+17. children dùng làm gì
+18. axios là gì
+19. react router dom là gì
+20. So sánh redux, react-redux, redux-toolkit
+21. redux là gì
+22. redux workflow
+23. redux middleware là gì
+24. so sánh context API và redux --> redux devtool
+25. khi store thay đổi thì các component có render lại k
+26. redux reducer có thể xử lí bất đồng bộ k / gọi API trong reducer
+27. PropTypes là gì

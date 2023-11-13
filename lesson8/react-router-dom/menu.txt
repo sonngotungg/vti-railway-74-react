@@ -1,0 +1,11 @@
+1. Basics
+3. Dynamic Routes
+4. Route Specificity
+5. Nested Routes
+6. useRoutes
+7. Link component
+8. NavLink component
+9. Navigate component
+10. useNavigate hook
+11. Search params
+12. Navigation state
