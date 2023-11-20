@@ -1,17 +1,18 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { ShoppingCartOutlined } from '@ant-design/icons';
+import Search from 'antd/es/input/Search';
 
 import { logout } from '../../redux-toolkit/slices/accountSlice'
+import { setFilters } from '../../redux-toolkit/slices/productSlice';
 
 import './Header.css'
-import Search from 'antd/es/input/Search';
 
 export const Header = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate();
   const {user} = useSelector(state => state.account);
+  const {filters} = useSelector(state => state.product);
 
   const isAuthenticated = localStorage.getItem('access-token')
 
@@ -25,13 +26,19 @@ export const Header = () => {
 
   const handleLogout = () => {
     dispatch(logout());
+    navigate('/')
   }
 
   const navigateToCart = () => {
     navigate('cart')
   }
 
-  const onSearch = () => {}
+  const onSearch = (data) => {
+    dispatch(setFilters({
+      ...filters,
+      searchValue: data
+    }))
+  }
 
   return (
     <div className='Header'>

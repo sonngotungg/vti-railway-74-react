@@ -1,4 +1,4 @@
-export const login = async () => {
+export const loginApi = async () => {
     // const response = await axiosInstance({
     //     method: 'post',
     //     url: '/auth/login-jwt',
