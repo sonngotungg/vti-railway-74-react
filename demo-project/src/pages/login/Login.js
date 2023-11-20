@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
+import { Navigate } from 'react-router-dom' 
 
 import { loginAsync } from '../../redux-toolkit/slices/accountSlice'
 
@@ -17,6 +18,12 @@ const Login = () => {
         password: passwordRef.current.value
     }
     dispatch(loginAsync(payload))
+  }
+
+  const isAuthenticated = localStorage.getItem('access-token')
+
+  if (isAuthenticated) {
+    return <Navigate to='/' replace />
   }
   return (
     <div className='Login'>

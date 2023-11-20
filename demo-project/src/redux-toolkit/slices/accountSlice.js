@@ -40,6 +40,7 @@ const accountSlice = createSlice({
     },
     logout: (state) => {
       state.user = null;
+      localStorage.removeItem('access-token')
     },
   },
   extraReducers: (builder) => {
