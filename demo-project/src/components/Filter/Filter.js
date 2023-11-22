@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
     getProducts,
     setFilters,
@@ -11,6 +11,7 @@ const PRODUCT_STATUSES = ["NEW", "USED"];
 
 const FilterComponent = () => {
     const dispatch = useDispatch();
+    const {filters} = useSelector(state => state.product)
 
     const [selectedProductTypes, setSelectedProductTypes] = useState([]);
     const [selectedShippingUnits, setSelectedShippingUnits] = useState([]);
@@ -19,13 +20,8 @@ const FilterComponent = () => {
     const [maxPrice, setMaxPrice] = useState("");
 
     const handleApplyFilters = () => {
-        console.log("Selected Product Types:", selectedProductTypes);
-        console.log("Selected Shipping Units:", selectedShippingUnits);
-        console.log("Selected Product Statuses:", selectedProductStatuses);
-        console.log("Min Price:", minPrice);
-        console.log("Max Price:", maxPrice);
-
-        const categoriesFilters = {
+        const updatedFilters = {
+            ...filters,
             productTypes: selectedProductTypes,
             shippingUnits: selectedShippingUnits,
             productStatuses: selectedProductStatuses,
@@ -33,9 +29,7 @@ const FilterComponent = () => {
             maxPrice: maxPrice,
         };
 
-        // dispatch(setFilters(categoriesFilters))
-        console.log({ categoriesFilters });
-        dispatch(getProducts(categoriesFilters));
+        dispatch(getProducts(updatedFilters));
     };
 
     const handleClearFilters = () => {
@@ -45,15 +39,15 @@ const FilterComponent = () => {
         setMinPrice("");
         setMaxPrice("");
 
-        dispatch(
-            setFilters({
-                productTypes: [],
-                shippingUnits: [],
-                productStatuses: [],
-                maxPrice: "",
-                minPrice: "",
-            })
-        );
+        // dispatch(
+        //     setFilters({
+        //         productTypes: [],
+        //         shippingUnits: [],
+        //         productStatuses: [],
+        //         maxPrice: "",
+        //         minPrice: "",
+        //     })
+        // );
     };
 
     return (

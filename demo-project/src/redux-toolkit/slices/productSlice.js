@@ -6,11 +6,20 @@ import {
     createProductApi,
 } from "../../apis/productApi";
 
+const initialFilters = {
+    searchValue: "",
+    current: 1,
+    productTypes: [],
+    shippingUnits: [],
+    productStatuses: [],
+    maxPrice: "",
+    minPrice: ""
+}
+
 // Redux Toolkit async thunk for fetching all products
 export const getProducts = createAsyncThunk(
     "product/getProducts",
-    async (data) => {
-        console.log(data);
+    async (data = initialFilters) => {
         const response = await getProductWithFiltersApi(data);
         return response;
     }
@@ -30,24 +39,13 @@ const productSlice = createSlice({
     name: "product",
     initialState: {
         products: [],
-        filters: {
-            searchValue: "",
-            current: 1,
-            productTypes: [],
-            shippingUnits: [],
-            productStatuses: [],
-            maxPrice: "",
-            minPrice: "",
-        },
+        filters: initialFilters,
         status: "idle", // 'idle', 'loading', 'succeeded', 'failed'
         error: null,
     },
     reducers: {
         setFilters: (state, action) => {
-            state.filters = {
-                ...state.filters,
-                ...action.payload,
-            };
+            state.filters = action.payload;
         },
     },
     extraReducers: (builder) => {
@@ -59,7 +57,6 @@ const productSlice = createSlice({
             })
             .addCase(getProducts.fulfilled, (state, action) => {
                 state.status = "succeeded";
-                console.log(action.payload);
                 state.products = action.payload;
             })
             .addCase(getProducts.rejected, (state, action) => {

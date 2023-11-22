@@ -2,13 +2,11 @@
 import axiosInstance from "./axios";
 
 export const getProductWithFiltersApi = async (filters) => {
-    console.log(filters);
     const response = await axiosInstance({
         method: "post",
         url: "/product/search",
         data: filters,
     });
-    console.log(response);
     return response.data.content;
 
     // // Simulating an API call delay

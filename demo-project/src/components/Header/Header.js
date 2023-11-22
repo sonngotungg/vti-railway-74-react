@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import Search from 'antd/es/input/Search';
 
 import { logout } from '../../redux-toolkit/slices/accountSlice'
-import { setFilters } from '../../redux-toolkit/slices/productSlice';
+import { getProducts, setFilters } from '../../redux-toolkit/slices/productSlice';
 
 import './Header.css'
 
@@ -34,10 +34,13 @@ export const Header = () => {
   }
 
   const onSearch = (data) => {
-    dispatch(setFilters({
+    const updatedFilters = {
       ...filters,
       searchValue: data
-    }))
+    };
+
+    // dispatch(setFilters(updatedFilters))
+    dispatch(getProducts(updatedFilters));
   }
 
   const navigateToHome = () => {

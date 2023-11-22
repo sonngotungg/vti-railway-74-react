@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { Button, Pagination } from 'antd'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { setFilters } from '../../redux-toolkit/slices/productSlice'
+import { getProducts, setFilters } from '../../redux-toolkit/slices/productSlice'
 import { setOrders } from '../../redux-toolkit/slices/orderSlice'
 
 import './ProductList.css'
@@ -41,9 +41,16 @@ const ProductList = ({ data }) => {
 
   
   const handlePagination = (pageIndex) => {
-    dispatch(setFilters({
+    // dispatch(setFilters({
+    //   current: pageIndex
+    // }))
+
+    const updatedFilters = {
+      ...filters,
       current: pageIndex
-    }))
+    };
+
+    dispatch(getProducts(updatedFilters));
   }
 
   return (
