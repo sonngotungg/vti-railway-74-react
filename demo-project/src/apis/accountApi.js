@@ -1,27 +1,29 @@
-export const loginApi = async () => {
-    // const response = await axiosInstance({
-    //     method: 'post',
-    //     url: '/auth/login-jwt',
-    //     data: {
-    //         username: 'username',
-    //         password: 'password'
-    //     }
-    // })
+import axiosInstance from "./axios";
+export const loginApi = async (data) => {
+    const response = await axiosInstance({
+        method: "post",
+        url: "/auth/login-jwt",
+        params: {
+            username: data.username,
+            password: data.password,
+        },
+    });
+    return response.data;
 
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve({
-                id: 2,
-                username: 'username 1',
-                fullName: 'full name',
-                avatar: 'avatar 1',
-                address: 'address 1',
-                role: 'CUSTOMER',
-                token: 'token 1'
-            })
-        }, 2000)
-    })
-}
+    // return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve({
+    //             id: 2,
+    //             username: 'username 1',
+    //             fullName: 'full name',
+    //             avatar: 'avatar 1',
+    //             address: 'address 1',
+    //             role: 'CUSTOMER',
+    //             token: 'token 1'
+    //         })
+    //     }, 2000)
+    // })
+};
 
 // export const register = async () => {
 //     const response = await axiosInstance({
