@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import ProductList from '../../components/product-list/ProductList'
 import { getProducts } from '../../redux-toolkit/slices/productSlice'
+import Filter from '../../components/Filter/Filter'
 
 import './Home.css'
 
@@ -15,6 +16,7 @@ const Home = () => {
   }, [])
   return (
     <div className='Home'>
+        <Filter />
         <ProductList data={products} />
     </div>
   )

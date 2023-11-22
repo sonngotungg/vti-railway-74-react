@@ -40,6 +40,10 @@ export const Header = () => {
     }))
   }
 
+  const navigateToHome = () => {
+    navigate('/')
+  }
+
   return (
     <div className='Header'>
       <div className='Header-top'>
@@ -56,7 +60,7 @@ export const Header = () => {
         {isAuthenticated && <button onClick={handleLogout}>Logout</button>}
       </div>
       <div className='Header-bottom'>
-        <img height={50} src='/shopee.png' alt='logo' />
+        <img onClick={navigateToHome} height={50} src='/shopee.png' alt='logo' />
         <Search 
           placeholder="input search text" 
           onSearch={onSearch} 

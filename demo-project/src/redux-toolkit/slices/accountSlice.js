@@ -3,9 +3,14 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { loginApi } from '../../apis/accountApi';
 
 export const loginAsync = createAsyncThunk('auth/login', async (credentials) => {
-  const data = await loginApi(credentials);
+  try {
+    const data = await loginApi(credentials);
 
-  return data;
+    return data;
+  } catch (error) {
+    console.log(error)
+  }
+
 });
 
 // export const registerAsync = createAsyncThunk('auth/register', async (user) => {

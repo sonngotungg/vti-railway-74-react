@@ -23,14 +23,21 @@ const productSlice = createSlice({
     filters: {
       searchValue: '',
       current: 1,
-      productTypes: []
+      productTypes: [],
+      shippingUnits: [],
+      productStatuses: [],
+      maxPrice: '',
+      minPrice: ''
     },
     status: 'idle', // 'idle', 'loading', 'succeeded', 'failed'
     error: null,
   },
   reducers: {
     setFilters: (state, action) => {
-      state.filters = action.payload;
+      state.filters = {
+        ...state.filters,
+        ...action.payload
+      };
     },
   },
   extraReducers: (builder) => {
