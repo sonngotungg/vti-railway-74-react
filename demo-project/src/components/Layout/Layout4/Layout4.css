@@ -1,0 +1,17 @@
+.Layout4 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    height: 700px;
+    background-color: rgb(141, 144, 147);
+}
+
+.Layout4-1 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    height: 80px;
+    background-color: red;
+    width: 100%;
+    margin: 10px;
+}

@@ -1,0 +1,18 @@
+.Layout3 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    width: 700px;
+    height: 700px;
+    align-items: center;
+}
+
+.Layout3-1 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    align-items: center;
+}

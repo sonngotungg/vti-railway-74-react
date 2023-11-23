@@ -1,0 +1,60 @@
+.Layout1 {
+    display: flex;
+    justify-content: center;
+}
+
+.Layout1-1 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    width: 20%;
+    margin: 10px;
+    height: 700px;
+    background-color: red;
+}
+
+.Layout1-2 {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border: 1px solid black;
+    margin: 10px;
+    margin-left: 0px;
+    flex-direction: column;
+}
+
+.Layout1-3 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 10px;
+    margin-left: 0px;
+    flex-direction: column;
+    height: 60px;
+    margin-right: 0px;
+    background-color: blue;
+}
+
+.Layout1-4 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 0px;
+    margin-left: 0px;
+    flex-direction: column;
+    height: 540px;
+    margin-right: 0px;
+    background-color: yellow;
+}
+
+.Layout1-5 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 10px;
+    margin-left: 0px;
+    flex-direction: column;
+    height: 60px;
+    margin-right: 0px;
+    background-color: green;
+}

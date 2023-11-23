@@ -1,0 +1,25 @@
+.Layout2 {
+    display: block;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.Layout2-1 {
+    display: block;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 10px;
+    height: 100px;
+    align-items: center;
+    background-color: red;
+}
+
+.Layout2-2 {
+    display: block;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 10px;
+    height: 550px;
+    align-items: center;
+    background-color: blue;
+}
