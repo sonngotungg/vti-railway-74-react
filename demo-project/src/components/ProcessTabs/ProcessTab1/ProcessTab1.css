@@ -1,0 +1,48 @@
+.ProcessTab1 {
+    display: flex;
+    width: 700px;
+    height: 35px;
+    border: solid 0.1px;
+    align-items: center;
+}
+
+.ProcessTab1-1 {
+    display: flex;
+    border: solid 0.1px;
+    width: 25%;
+    justify-content: center;
+    margin-left: 3px;
+    height: 25px;
+    align-items: center;
+}
+
+.ProcessTab1-2 {
+    display: flex;
+    border: solid 0.1px;
+    width: 25%;
+    justify-content: center;
+    height: 25px;
+    align-items: center;
+}
+
+.ProcessTab1-3 {
+    display: flex;
+    border: solid 0.1px;
+    width: 25%;
+    justify-content: center;
+    margin-right: 3px;
+    height: 25px;
+    align-items: center;
+}
+
+.ProcessTab1-2:hover {
+    background: red;
+}
+
+.ProcessTab1-1:hover {
+    background: red;
+}
+
+.ProcessTab1-3:hover {
+    background: red;
+}
