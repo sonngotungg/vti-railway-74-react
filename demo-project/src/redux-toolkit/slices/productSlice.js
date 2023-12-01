@@ -4,6 +4,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import {
     getProductWithFiltersApi,
     createProductApi,
+    updateProductApi,
+    deleteProductApi,
 } from "../../apis/productApi";
 
 const initialFilters = {
@@ -30,6 +32,22 @@ export const createProduct = createAsyncThunk(
     "product/createProduct",
     async (data) => {
         const response = await createProductApi(data);
+        return response;
+    }
+);
+
+export const updateProduct = createAsyncThunk(
+    "product/updateProduct",
+    async (data) => {
+        const response = await updateProductApi(data);
+        return response;
+    }
+);
+
+export const deleteProduct = createAsyncThunk(
+    "product/deleteProduct",
+    async (data) => {
+        const response = await deleteProductApi(data);
         return response;
     }
 );
