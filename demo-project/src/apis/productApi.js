@@ -125,21 +125,50 @@ export const getProductWithFiltersApi = async (filters) => {
 
 // Simulated API call for fetching a product by ID
 export const createProductApi = async (newProduct) => {
-    // const response = await axiosInstance({
-    //     method: 'post',
-    //     url: '/product/create',
-    //     data: {
-    //         image: 'url',
-    //         price: 0,
-    //         productName: '',
-    //         productStatus: '',
-    //         productType: '',
-    //         shippingUnit: ''
-    //     }
-    // })
+    const response = await axiosInstance({
+        method: 'post',
+        url: '/product/create',
+        data: {
+            image: 'url',
+            price: 0,
+            productName: '',
+            productStatus: '',
+            productType: '',
+            shippingUnit: ''
+        }
+    })
+
+    return response.data
 
     // Simulating an API call delay
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     // not return anythings
 };
+
+export const updateProductApi = async (data) => {
+    const response = await axiosInstance({
+        method: 'post',
+        url: '/product/update',
+        data: data
+    })
+
+    return response.data
+
+    // Simulating an API call delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    // not return anythings
+};
+
+export const deleteProductApi = async (productId) => {
+    const response = await axiosInstance({
+        method: 'delete',
+        url: '/product/delete',
+        params: {
+            productId
+        }
+    })
+
+    return response.data
+}

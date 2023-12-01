@@ -1,7 +1,7 @@
 // api.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8888/api/v1';
+const API_URL = 'https://7c58-240b-251-93c1-bb00-14a6-44f2-d9a-cc75.ngrok-free.app/api/v1';
 
 const axiosInstance = axios.create({
   baseURL: API_URL,

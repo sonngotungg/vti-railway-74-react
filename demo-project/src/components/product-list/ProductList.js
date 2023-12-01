@@ -3,7 +3,7 @@ import { Button, Pagination } from 'antd'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { getProducts, setFilters } from '../../redux-toolkit/slices/productSlice'
-import { setOrders } from '../../redux-toolkit/slices/orderSlice'
+import { createOrder } from '../../redux-toolkit/slices/orderSlice'
 
 import './ProductList.css'
 
@@ -19,7 +19,7 @@ const ProductCard = ({data}) => {
     }
 
     console.log({payload})
-    dispatch(setOrders(payload))
+    dispatch(createOrder(payload))
   }
 
   return (
@@ -67,7 +67,7 @@ const ProductList = ({ data }) => {
         <Pagination 
           current={filters.current} 
           onChange={handlePagination} 
-          total={50} 
+          total={50}
         />
       )}
     </>

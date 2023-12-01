@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import './Cart.css'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { getOrderByStatus } from '../../redux-toolkit/slices/orderSlice'
 
 export const Cart = () => {
-  const {orders} = useSelector(state => state.order)
+  const dispatch = useDispatch()
+  const {user} = useSelector(state => state.account);
+  const {orders} = useSelector(state => state.order);
+  
+  const [orderStatus, setOrderStatus] = useState('PENDING')
+
+  useEffect(() => {
+    const data = {
+      accountId: user?.id,
+      orderStatus: orderStatus
+    }
+    dispatch(getOrderByStatus(data))
+  }, [])
 
   return (
     <div>
