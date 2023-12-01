@@ -1,0 +1,41 @@
+.Header1 {
+    padding: 10px 50px;
+    background-color: #f94e30;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+}
+
+.Header1-image {
+    margin: 20px;
+    height: 40px;
+    width: 100px;
+    background-color: aliceblue;
+}
+
+.Header1-input {
+    /* fontsize: 16; */
+    /* color: red; */
+    width: 500px;
+}
+.Header1-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header1-1-1 {
+    display: flex;
+}
+
+.Header1-1-2 {
+    display: flex;
+}
+
+.Header1-2 {
+    display: flex;
+    align-items: center;
+}
+
+.Header1-2-1 {
+    size: 10cm;
+}

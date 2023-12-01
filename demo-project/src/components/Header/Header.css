@@ -1,0 +1,16 @@
+.Header {
+    padding: 10px 50px;
+    background-color: #f94e30;
+    color: #fff;
+}
+
+.Header-top,
+.Header-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header-actions {
+    color: #000;
+    justify-self: flex-end;
+}
