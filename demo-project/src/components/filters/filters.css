@@ -1,0 +1,17 @@
+.filter-header{
+    font-size: 1.4rem;
+    transition: right linear 0.1s;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.content-filter{
+    padding: 0px 25px 10px 25px;
+    font-size: 1.4rem;
+}
+
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
