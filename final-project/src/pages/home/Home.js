@@ -6,15 +6,13 @@ import Filters from '../../components/filters/Filters'
 import ProductForm from '../../components/product-form/ProductForm'
 import ProductCard from '../../components/product-card/ProductCard'
 import Header from '../../components/header/Header'
-import { getProducts } from '../../redux-toolkit/slices/productSlice'
+import { getProducts, setFilters } from '../../redux-toolkit/slices/productSlice'
 
 import './Home.css'
 
 const Home = () => {
   const dispatch = useDispatch();
-
-  const { user } = useSelector(state => state.account)
-  const { products, status } = useSelector(state => state.product)
+  const { filters, products } = useSelector(state => state.product)
 
   const [openProductForm, setOpenProductForm] = useState(false)
 
@@ -24,7 +22,14 @@ const Home = () => {
 
   const isAdmin = localStorage.getItem('user-role') === 'ADMIN'
 
-  console.log({ products })
+  const handlePagination = (pageIndex) => {
+    const updatedFilters = {
+      ...filters,
+      page: pageIndex
+    };
+    dispatch(setFilters(updatedFilters))
+    dispatch(getProducts(updatedFilters));
+  }
 
   return (
     <>
@@ -57,7 +62,13 @@ const Home = () => {
               }
             </div>
             {products.length === 0 && <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />}
-            {products.length > 0 && <Pagination defaultCurrent={1} total={50} />}
+            {products.length > 0 && (
+              <Pagination
+                current={filters.current}
+                onChange={handlePagination}
+                total={50}
+              />
+            )}
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { logout } from '../../redux-toolkit/slices/accountSlice';
-import { getProducts } from '../../redux-toolkit/slices/productSlice';
+import { getProducts, setFilters } from '../../redux-toolkit/slices/productSlice';
 
 import './Header.css'
 
@@ -42,7 +42,7 @@ const Header = () => {
       productName: data
     };
 
-    // dispatch(setFilters(updatedFilters))
+    dispatch(setFilters(updatedFilters))
     dispatch(getProducts(updatedFilters));
   }
 

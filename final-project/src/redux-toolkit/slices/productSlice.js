@@ -9,13 +9,16 @@ import {
 } from "../../apis/productApi";
 
 const initialFilters = {
-    searchValue: "",
-    current: 1,
+    productName: "",
+    page: 1,
     productTypes: [],
     shippingUnits: [],
-    productStatuses: [],
+    productStatus: [],
     maxPrice: "",
-    minPrice: ""
+    minPrice: "",
+    size: 6,
+    sortBy: 'id',
+    sortType: 'desc'
 }
 
 // Redux Toolkit async thunk for fetching all products
