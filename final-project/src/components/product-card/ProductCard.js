@@ -4,11 +4,13 @@ import { useDispatch } from 'react-redux'
 
 import { categoryOptions, productStatusOptions } from '../../constants'
 import { createOrder } from '../../redux-toolkit/slices/orderSlice'
+import { deleteProduct, updateProduct } from '../../redux-toolkit/slices/productSlice'
 
 import './ProductCard.css'
 
 const ProductCard = ({ data, isAdmin }) => {
   const {
+    id,
     image = '/logo192.png',
     productName,
     productType,
@@ -54,6 +56,8 @@ const ProductCard = ({ data, isAdmin }) => {
     console.log({
       updatedProductInfo
     })
+
+    dispatch(updateProduct(updatedProductInfo))
   }
 
   const handleDelete = () => {
@@ -61,6 +65,7 @@ const ProductCard = ({ data, isAdmin }) => {
   }
 
   const handleDeleteConfirm = () => {
+    dispatch(deleteProduct(id))
     setOpenModal(false)
 
   }

@@ -28,14 +28,7 @@ export const createProductApi = async (newProduct) => {
     const response = await axiosInstance({
         method: 'post',
         url: '/product/create',
-        data: {
-            image: 'url',
-            price: 0,
-            productName: '',
-            productStatus: '',
-            productType: '',
-            shippingUnit: ''
-        }
+        data: newProduct
     })
 
     return response.data
