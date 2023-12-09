@@ -1,64 +1,43 @@
-import React, { useState } from 'react';
-import { Button, message, Steps } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { Button, message, Radio } from 'antd';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { cartProgressSteps } from '../../constants';
 import CartCard from '../../components/cart-card/CartCard';
 
 import './Cart.css'
+import { getOrderByStatus } from '../../redux-toolkit/slices/orderSlice';
 
 const Cart = () => {
-  const [current, setCurrent] = useState(0);
-  const next = () => {
-    setCurrent(current + 1);
-  };
-  const prev = () => {
-    setCurrent(current - 1);
-  };
-  const items = cartProgressSteps.map((item) => ({
-    key: item.title,
-    title: item.title,
-  }));
+  const dispatch = useDispatch()
+  const { orders } = useSelector(state => state.order)
+  const { user } = useSelector(state => state.account)
 
+  const [status, setStatus] = useState('ALL');
+
+  useEffect(() => {
+    const data = {
+      accountId: user?.id,
+      orderStatus: status
+    }
+    dispatch(getOrderByStatus(data))
+  }, [])
+
+  const filteredOrders = orders.filter(order => order.orderStatus === status || status === 'ALL')
+  console.log({ status, orders })
   return (
     <div className='Cart'>
-      <Steps current={current} items={items} />
+      <Radio.Group value={status} onChange={(e) => setStatus(e.target.value)}>
+        <Radio.Button value="ALL">Tất cả</Radio.Button>
+        <Radio.Button value="PENDING">Chờ thanh toán</Radio.Button>
+        <Radio.Button value="DONE">Đã thanh toán</Radio.Button>
+        <Radio.Button value="CANCELED">Đã hủy</Radio.Button>
+      </Radio.Group>
       <div className='cart-content'>
-        {/* {cartProgressSteps[current].content} */}
-        <CartCard />
-        <CartCard />
-        <CartCard />
-        <CartCard />
-        <CartCard />
-        <CartCard />
-        <CartCard />
-        <CartCard />
-        <CartCard />
-        <CartCard />
-        <CartCard />
-      </div>
-      <div style={{ marginTop: 24 }} >
-        {current < cartProgressSteps.length - 1 && (
-          <Button type="primary" size='large' style={{ width: '200px' }} onClick={() => next()}>
-            Next
-          </Button>
-        )}
-        {current === cartProgressSteps.length - 1 && (
-          <Button type="primary" size='large' style={{ width: '200px' }} onClick={() => message.success('Processing complete!')}>
-            Done
-          </Button>
-        )}
-        {current > 0 && (
-          <Button
-            size='large'
-            style={{
-              margin: '0 8px',
-              width: '200px'
-            }}
-            onClick={() => prev()}
-          >
-            Previous
-          </Button>
-        )}
+        {
+          filteredOrders.map(order => (
+            <CartCard data={order} />
+          ))
+        }
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { Button, Card, Input, Modal, Select } from 'antd'
 import React, { useRef, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { categoryOptions, productStatusOptions } from '../../constants'
 import { createOrder } from '../../redux-toolkit/slices/orderSlice'
@@ -19,6 +19,7 @@ const ProductCard = ({ data, isAdmin }) => {
   } = data
 
   const dispatch = useDispatch()
+  const { user } = useSelector(state => state.account)
 
   const inputRef = useRef(null)
   const priceInputRef = useRef(null)
@@ -32,12 +33,12 @@ const ProductCard = ({ data, isAdmin }) => {
   const handleStatusChange = (value) => updatedProductStatus.current = value
 
   const handleAddToCart = () => {
-    const numberOfItems = inputRef.current.input.value
+    const numberOfItems = parseInt(inputRef.current.input.value)
     console.log({ numberOfItems })
 
     const newOrder = {
-      accountId: '',
-      productId: '',
+      accountId: user?.id,
+      productId: id,
       quantity: numberOfItems
     }
 

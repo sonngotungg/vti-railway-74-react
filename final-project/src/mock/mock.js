@@ -341,6 +341,82 @@ const getOrderResponse = [
       "shippingUnit": "EXPRESS",
       "productStatus": "NEW"
     }
+  },
+  {
+    "createBy": "username",
+    "createDate": "2023-12-05T11:05:35.221+00:00",
+    "updateBy": "username",
+    "updateDate": "2023-12-05",
+    "id": 20,
+    "orderStatus": "CANCELED",
+    "quantity": 3,
+    "account": {
+      "createBy": "username",
+      "createDate": "2023-10-16T12:12:54.696+00:00",
+      "updateBy": null,
+      "updateDate": null,
+      "id": 4,
+      "username": "chinh2",
+      "avatar": null,
+      "address": null,
+      "dateBirth": null,
+      "fullName": "Vũ Quang Chinh",
+      "infomation": null,
+      "password": "$2a$10$WmBD5dsei5inRYAR0Hc.xelIomG0Yv7At3ZeoGOW4jh4KAHte5mQC",
+      "phoneNumber": "0984285632",
+      "role": "CUSTOMER"
+    },
+    "product": {
+      "createBy": "Mr.Uoc",
+      "createDate": "2023-09-15T13:23:45.943+00:00",
+      "updateBy": null,
+      "updateDate": null,
+      "id": 1,
+      "image": "https://product.hstatic.net/200000201725/product/1622bc_d07f948893a64053baeede025379df9a_master.jpg",
+      "productName": "Áo Khoác Da Lộn Chần Bông",
+      "price": 800000,
+      "productType": "CLOTHES",
+      "shippingUnit": "EXPRESS",
+      "productStatus": "NEW"
+    }
+  },
+  {
+    "createBy": "username",
+    "createDate": "2023-12-05T11:05:35.221+00:00",
+    "updateBy": "username",
+    "updateDate": "2023-12-05",
+    "id": 20,
+    "orderStatus": "PENDING",
+    "quantity": 3,
+    "account": {
+      "createBy": "username",
+      "createDate": "2023-10-16T12:12:54.696+00:00",
+      "updateBy": null,
+      "updateDate": null,
+      "id": 4,
+      "username": "chinh2",
+      "avatar": null,
+      "address": null,
+      "dateBirth": null,
+      "fullName": "Vũ Quang Chinh",
+      "infomation": null,
+      "password": "$2a$10$WmBD5dsei5inRYAR0Hc.xelIomG0Yv7At3ZeoGOW4jh4KAHte5mQC",
+      "phoneNumber": "0984285632",
+      "role": "CUSTOMER"
+    },
+    "product": {
+      "createBy": "Mr.Uoc",
+      "createDate": "2023-09-15T13:23:45.943+00:00",
+      "updateBy": null,
+      "updateDate": null,
+      "id": 1,
+      "image": "https://product.hstatic.net/200000201725/product/1622bc_d07f948893a64053baeede025379df9a_master.jpg",
+      "productName": "Áo Khoác Da Lộn Chần Bông",
+      "price": 800000,
+      "productType": "CLOTHES",
+      "shippingUnit": "EXPRESS",
+      "productStatus": "NEW"
+    }
   }
 ]
 

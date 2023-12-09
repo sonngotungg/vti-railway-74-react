@@ -2,7 +2,7 @@ import { buyOrderResponse, cancelOrderResponse, getOrderResponse, orderResponse 
 import axiosInstance from "./axios";
 
 // Simulated API call for fetching a product by ID
-export const createOrderApi = async (newProduct) => {
+export const createOrderApi = async (newOrder) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(orderResponse)
@@ -12,16 +12,12 @@ export const createOrderApi = async (newProduct) => {
     const response = await axiosInstance({
         method: 'post',
         url: '/order/create',
-        data: {
-            accountId: 1,
-            productId: 10,
-            quantity: 2,
-        }
+        data: newOrder
     })
     return response.data
 };
 
-export const buyOrderApi = async (newProduct) => {
+export const buyOrderApi = async (orderId) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(buyOrderResponse)
@@ -32,7 +28,7 @@ export const buyOrderApi = async (newProduct) => {
         method: 'post',
         url: '/buy-product',
         params: {
-            orderId: '1'
+            orderId
         }
     })
 

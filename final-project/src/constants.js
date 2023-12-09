@@ -42,17 +42,21 @@ export const productStatusOptions = [
     }
 ];
 
-export const cartProgressSteps = [
+export const orderStatusOptions = [
     {
+        id: 'ALL',
         title: 'Tất cả',
     },
     {
+        id: 'PENDING',
         title: 'Chờ thanh toán',
     },
     {
+        id: 'DONE',
         title: 'Đã thanh toán',
     },
-    // {
-    //     title: 'Đã hủy',
-    // },
+    {
+        id: 'CANCELED',
+        title: 'Đã hủy',
+    },
 ]

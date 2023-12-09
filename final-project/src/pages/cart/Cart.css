@@ -1,4 +1,7 @@
-.Cart {}
+.Cart {
+    text-align: center;
+    padding: 50px 0;
+}
 
 .cart-content {
     display: flex;
