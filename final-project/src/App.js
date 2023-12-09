@@ -1,18 +1,37 @@
-import './App.css';
-import Cart from './pages/cart/Cart';
-import Home from './pages/home/Home';
-import Login from './pages/login/Login';
-import Register from './pages/register/Register';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import { useSelector } from "react-redux";
 
-function App() {
+import Login from "./pages/login/Login";
+import Home from "./pages/home/Home";
+import Register from "./pages/register/Register";
+import Cart from "./pages/cart/Cart";
+import { ProtectedRoute } from "./pages/ProtectedRoute";
+
+import './App.css'
+
+export default function App() {
+  const { user } = useSelector(state => state.account)
+  const isCustomer = localStorage.getItem('user-role') === 'CUSTOMER'
+
   return (
-    <div className="App">
-      {/* <Login /> */}
-      <Register />
-      {/* <Home /> */}
-      {/* <Cart /> */}
-    </div>
+    <Routes>
+      <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
+      <Route
+        path="/cart"
+        element={
+          <ProtectedRoute
+            isAllowed={isCustomer}
+          >
+            <Cart />
+          </ProtectedRoute>
+        }
+      />
+      <Route path='/' element={<Home />} />
+      <Route path="*" element={<p>There's nothing here: 404!</p>} />
+    </Routes>
   );
 }
-
-export default App;

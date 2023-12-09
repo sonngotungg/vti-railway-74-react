@@ -3,3 +3,10 @@
     flex-direction: column;
     gap: 10px;
 }
+
+.edit-actions {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 10px;
+}

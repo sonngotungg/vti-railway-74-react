@@ -38,7 +38,7 @@ const ProductForm = ({ openModal, setOpenModal }) => {
       <h3>Ảnh sản phẩm</h3>
       <Input placeholder='Nhập link ảnh' ref={productImageRef} style={{ width: '400px' }} />
       <h3>Giá</h3>
-      <Input placeholder='Nhập giá sản phẩm' type='number' ref={productPriceRef} style={{ width: '400px' }} />
+      <Input placeholder='Nhập giá sản phẩm' type='number' ref={productPriceRef} style={{ width: '400px' }} min={0} />
       <h3>Tình trạng sản phẩm</h3>
       <Select
         defaultValue={'NEW'}

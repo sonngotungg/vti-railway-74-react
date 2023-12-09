@@ -8,7 +8,7 @@ const loginMockData = {
   avatar: '',
   address: '',
   role: 'CUSTOMER',
-  token: ''
+  token: 'token'
 }
 
 // 2. register
@@ -54,7 +54,7 @@ const productMockData = {
       "id": 1,
       "image": "https://product.hstatic.net/200000201725/product/1622bc_d07f948893a64053baeede025379df9a_master.jpg",
       "productName": "Áo Khoác Da Lộn Chần Bông",
-      "price": 800000,
+      "price": 100000,
       "productType": "CLOTHES",
       "shippingUnit": "EXPRESS",
       "productStatus": "NEW"

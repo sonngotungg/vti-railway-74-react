@@ -17,16 +17,16 @@
     align-items: center;
 }
 
-.Header-actions {
-    color: #000;
-    justify-self: flex-end;
+.Header-action {
+    cursor: pointer;
 }
 
 .Header-bottom img {
     cursor: pointer;
 }
 
-.cart-logo, .logo {
+.cart-logo,
+.logo {
     cursor: pointer;
 }
 

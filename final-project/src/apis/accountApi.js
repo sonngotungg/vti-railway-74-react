@@ -19,7 +19,10 @@ export const loginApi = async (data) => {
     return response.data;
 };
 
-export const register = async (data) => {
+export const registerApi = async (data = {}) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, 2000)
+    })
     const response = await axiosInstance({
         method: 'post',
         url: '/auth/register',
@@ -27,7 +30,7 @@ export const register = async (data) => {
     })
 
     console.log('register: ', response)
-
+    return response.data;
     // save access-token got from the response data into localStorage
     // save other data into redux
 }

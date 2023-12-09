@@ -5,7 +5,7 @@ import axiosInstance from "./axios";
 export const getProductWithFiltersApi = async (filters) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(productMockData)
+            resolve(productMockData.content)
         }, 2000)
     })
 

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Button, message, Steps } from 'antd';
 
 import { cartProgressSteps } from '../../constants';
+import CartCard from '../../components/cart-card/CartCard';
 
 import './Cart.css'
-import CartCard from '../../components/cart-card/CartCard';
 
 const Cart = () => {
   const [current, setCurrent] = useState(0);

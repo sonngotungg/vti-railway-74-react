@@ -1,30 +1,46 @@
-import React, { useState } from 'react'
-import { Button, Pagination } from 'antd'
+import React, { useEffect, useState } from 'react'
+import { Button, Empty, Pagination } from 'antd'
+import { useDispatch, useSelector } from 'react-redux'
 
-import Header from '../../components/header/Header'
 import Filters from '../../components/filters/Filters'
 import ProductForm from '../../components/product-form/ProductForm'
 import ProductCard from '../../components/product-card/ProductCard'
-import { productMockData } from '../../mock/mock'
+import Header from '../../components/header/Header'
+import { getProducts } from '../../redux-toolkit/slices/productSlice'
 
 import './Home.css'
 
 const Home = () => {
+  const dispatch = useDispatch();
+
+  const { user } = useSelector(state => state.account)
+  const { products, status } = useSelector(state => state.product)
+
   const [openProductForm, setOpenProductForm] = useState(false)
 
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+
+  const isAdmin = localStorage.getItem('user-role') === 'ADMIN'
+
+  console.log({ products })
+
   return (
-    <div>
+    <>
       <Header />
       <div className="Layout1">
         <div className="Layout1-1">
           <Filters />
         </div>
         <div className="Layout1-2">
-          <div className="Layout1-3">
-            <Button style={{ width: 'fit-content' }} size='large' type="primary" onClick={() => setOpenProductForm(true)}>
-              Tạo Sản Phẩm
-            </Button>
-          </div>
+          {isAdmin && (
+            <div className="Layout1-3">
+              <Button style={{ width: 'fit-content' }} size='large' type="primary" onClick={() => setOpenProductForm(true)}>
+                Tạo Sản Phẩm
+              </Button>
+            </div>
+          )}
           <div className="Layout1-4">
             {/* content */}
             {openProductForm && (
@@ -35,17 +51,17 @@ const Home = () => {
             )}
             <div className='product-list'>
               {
-                productMockData.content.map(item => (
-                  <ProductCard key={item.id} data={item} />
+                products.map(item => (
+                  <ProductCard key={item.id} data={item} isAdmin={isAdmin} />
                 ))
               }
             </div>
-            <Pagination defaultCurrent={1} total={50} />
+            {products.length === 0 && <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />}
+            {products.length > 0 && <Pagination defaultCurrent={1} total={50} />}
           </div>
-          <div className="Layout1-5">footer</div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
