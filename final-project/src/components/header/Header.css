@@ -1,0 +1,35 @@
+.Header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 50px;
+    background-color: #f94e30;
+    color: #fff;
+}
+
+.Header-top {
+    align-self: flex-end;
+}
+
+.Header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-actions {
+    color: #000;
+    justify-self: flex-end;
+}
+
+.Header-bottom img {
+    cursor: pointer;
+}
+
+.cart-logo, .logo {
+    cursor: pointer;
+}
+
+.cart-logo:hover {
+    opacity: .7;
+}

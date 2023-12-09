@@ -1,0 +1,9 @@
+.CartCard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
