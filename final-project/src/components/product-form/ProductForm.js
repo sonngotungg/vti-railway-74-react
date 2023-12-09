@@ -1,8 +1,13 @@
 import { Button, Input, Modal, Select } from 'antd'
 import React, { useRef } from 'react'
+import { useDispatch } from 'react-redux'
+
 import { categoryOptions, productStatusOptions, shippingUnitOptions } from '../../constants'
+import { createProduct } from '../../redux-toolkit/slices/productSlice'
 
 const ProductForm = ({ openModal, setOpenModal }) => {
+  const dispatch = useDispatch()
+
   const productNameRef = useRef(null)
   const productImageRef = useRef(null)
   const productPriceRef = useRef(null)
@@ -25,6 +30,7 @@ const ProductForm = ({ openModal, setOpenModal }) => {
     }
 
     console.log({ newProduct })
+    dispatch(createProduct(newProduct))
     setOpenModal(false)
   }
   const handleCancel = () => {
