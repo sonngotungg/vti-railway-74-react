@@ -14,7 +14,9 @@ import './App.css'
 
 export default function App() {
   const { user } = useSelector(state => state.account)
-  const isCustomer = localStorage.getItem('user-role') === 'CUSTOMER'
+
+  const userInfo = JSON.parse(localStorage.getItem('user'))
+  const isCustomer = userInfo?.role === 'CUSTOMER'
 
   return (
     <Routes>

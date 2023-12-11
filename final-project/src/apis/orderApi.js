@@ -26,16 +26,13 @@ export const buyOrderApi = async (orderId) => {
 
     const response = await axiosInstance({
         method: 'post',
-        url: '/buy-product',
-        params: {
-            orderId
-        }
+        url: `/buy-product/${orderId}`,
     })
 
     return response.data
 };
 
-export const cancelBuyApi = async (newProduct) => {
+export const cancelBuyApi = async (orderId) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(cancelOrderResponse)
@@ -44,28 +41,25 @@ export const cancelBuyApi = async (newProduct) => {
 
     const response = await axiosInstance({
         method: 'post',
-        url: '/buy-cancel',
-        params: {
-            orderId: '1',
-        }
+        url: `/buy-cancel/${orderId}`,
     })
 
     return response.data
 };
 
 export const getOrderByStatusApi = async ({ accountId, orderStatus }) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(getOrderResponse)
-        }, 2000)
-    })
+    // return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve(getOrderResponse)
+    //     }, 2000)
+    // })
 
     const response = await axiosInstance({
         method: 'post',
         url: '/order/get-by-status',
         params: {
             accountId: accountId,
-            orderStatus: orderStatus
+            orderStatus: orderStatus === 'ALL' ? null : orderStatus
         }
     })
 

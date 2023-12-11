@@ -46,6 +46,7 @@ const accountSlice = createSlice({
         state.user = action.payload;
         localStorage.setItem('access-token', action.payload.token)
         localStorage.setItem('user-role', action.payload.role)
+        localStorage.setItem('user', JSON.stringify(action.payload))
       })
       .addCase(loginAsync.rejected, (state, action) => {
         state.status = 'failed';

@@ -20,7 +20,8 @@ const Home = () => {
     dispatch(getProducts());
   }, []);
 
-  const isAdmin = localStorage.getItem('user-role') === 'ADMIN'
+  const userInfo = JSON.parse(localStorage.getItem('user'))
+  const isAdmin = userInfo?.role === 'ADMIN'
 
   const handlePagination = (pageIndex) => {
     const updatedFilters = {

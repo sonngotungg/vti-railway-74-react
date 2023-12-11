@@ -12,15 +12,18 @@ const Cart = () => {
   const { orders } = useSelector(state => state.order)
   const { user } = useSelector(state => state.account)
 
+  const userInfo = JSON.parse(localStorage.getItem('user'))
+  const { id } = userInfo
+
   const [status, setStatus] = useState('ALL');
 
   useEffect(() => {
     const data = {
-      accountId: user?.id,
+      accountId: id,
       orderStatus: status
     }
     dispatch(getOrderByStatus(data))
-  }, [])
+  }, [status])
 
   const filteredOrders = orders.filter(order => order.orderStatus === status || status === 'ALL')
   console.log({ status, orders })
@@ -34,7 +37,7 @@ const Cart = () => {
       </Radio.Group>
       <div className='cart-content'>
         {
-          filteredOrders.map(order => (
+          orders.map(order => (
             <CartCard data={order} />
           ))
         }
